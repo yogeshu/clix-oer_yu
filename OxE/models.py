@@ -9,3 +9,12 @@ class Elibrary(models.Model):
     price         = models.DecimalField(decimal_places=2,max_digits=10000)
     summery       = models.TextField(blank=True)
     oer           = models.BooleanField(default=True)
+
+class index:
+    course_id: int
+    course_title: str
+    course_description: str
+    course_img: str
+    course_value : str
+    coruse_student : str
+    course_math: bool

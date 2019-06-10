@@ -14,8 +14,7 @@ $header-link-active-color: #50c2fa;
 *{
     box-sizing: border-box;
 }
-html,body{
-  
+html,body{  
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -2864,7 +2863,7 @@ border-radius: 15px 15px 0px 0px;
     // padding: 20px 20px;
     padding: 10px;
     margin: 2px;
-    font-size: 17px;
+    font-size: 14px;
     font-weight: bold;
     color: #f9e2ad;
     text-transform: uppercase;
@@ -2883,10 +2882,11 @@ border-radius: 15px 15px 0px 0px;
   }
 }
 
-.img-back{
+.img-back{ z-index: 999;
   height:400px;
   width:100%;
-  background-color:#000;;
+  
+  background-color:rgba(12, 8, 8, 0.466);
 }
 .uicf{
   background: #00B4CC;
@@ -3200,4 +3200,8 @@ width:12.5rem;
   background-color:#e74c3c;
   opacity:1;filter:"alpha(opacity=100)";
   -ms-filter:"alpha(opacity=100)";
+}
+.back-colox{
+  background: $primary-theme-color;
+  margin: 10px;
 }

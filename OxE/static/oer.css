@@ -2733,7 +2733,7 @@ ul.social-network li {
   overflow: hidden;
   padding: 10px;
   margin: 2px;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: bold;
   color: #f9e2ad;
   text-transform: uppercase;
@@ -3062,5 +3062,10 @@ a.slide_btn {
   opacity: 1;
   filter: "alpha(opacity=100)";
   -ms-filter: "alpha(opacity=100)";
+}
+
+.back-colox {
+  background: #713558;
+  margin: 10px;
 }
 /*# sourceMappingURL=oer.css.map */
