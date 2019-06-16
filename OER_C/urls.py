@@ -15,12 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from OxE.views import homepage_view, domain_view, about_view , vix_view
+from OxE.views import homepage_view, domain_view, about_view , vix_view , demo_view , player_image_view
 urlpatterns = [
     
 path('', homepage_view , name= "home"),
+path('playerImage', player_image_view , name="player_image_view"),
 path('domain', domain_view ),
 path('about', about_view),
-path('vix', vix_view),
+path('cscroll/' , demo_view),
 path('admin/', admin.site.urls),
 ]

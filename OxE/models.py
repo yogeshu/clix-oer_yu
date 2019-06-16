@@ -18,3 +18,5 @@ class index:
     course_value : str
     coruse_student : str
     course_math: bool
+    course_science: bool
+    course_english: bool

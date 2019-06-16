@@ -7,11 +7,13 @@ def homepage_view(request, *args, **kwargs):
     # return HttpResponse ("<h1> hello i am new developer </h1>")
     
     destu1 = index()
-    destu1.course_value = "math"
+    destu1.course_value = "science"
     destu1.coruse_student = "8th"
     destu1.course_description =  "lorem more more more more "
     destu1.course_title = "Math courses"
     destu1.course_math = True
+    destu1.course_science =True
+    destu1.course_english= True
 
      
     destu2 = index()
@@ -66,6 +68,9 @@ def domain_view(request,  *args, **kwargs):
     destu3.course_title = "scienes courses"
     destu3.course_math = True
     
+
+    
+    
      
     destus= [ destu1, destu2, destu3 ]
     # return render(request , "domain.html", {})
@@ -73,10 +78,13 @@ def domain_view(request,  *args, **kwargs):
     return render(request , "domain.html" , {'destus':destus})
 def demo_view( request, *args, **kwargs):
     # return HttpResponse ("<h1> hello i am new demo_view </h1>")
-    return render(request , "vix.html", {})
+    return render(request , "cscroll.html", {})
 
 
 def vix_view( request,  *args, **kwargs):
     # return HttpResponse ("<h1> hello iam new to vix </h1>")
     return render(request , "vix.html", {})
+
+def player_image_view( request, *args , **kwargs):
+    return render(request, "player_image.html", {})
 

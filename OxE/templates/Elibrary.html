@@ -2,17 +2,21 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row">
+
+{% include "oer_breadcrumbs.html" %}
+</div>
+<div class="row">
 {% include "OER_TOC.html" %}
 
 {% include "module_cards.html" %}
+
         </div>
-    </div>
+    <!-- </div> -->
     {% include "pagination.html" %}
 
     <div class="py-5">
 
         {% include "Oer_teacher_courses.html" %}
     </div>
-
-   {% include "explore_more.html" %}
+</div>
     {%  endblock  %}

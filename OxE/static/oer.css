@@ -1,12 +1,7 @@
 @charset "UTF-8";
 /*Orange color variables*/
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-html, body {
+html {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -15,22 +10,13 @@ html, body {
 }
 
 body {
+  scroll-behavior: smooth;
+  position: relative;
   width: 100%;
   font-size: 12px;
   font-weight: 400;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins' Arial, Helvetica, sans-serif;
   color: #000;
-}
-
-.carousel-item {
-  height: 350px;
-  margin-right: 0% !important;
-}
-
-.carousel-indicators li {
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
 }
 
 .oer_toc a {
@@ -419,6 +405,15 @@ body {
   height: 30px;
   border-radius: 30px 30px;
   color: #9DBFAF;
+}
+
+@media screen and (max-width: 1024px) {
+  .searchTerm {
+    width: 70%;
+  }
+  .form-control {
+    width: 70%;
+  }
 }
 
 .searchTerm:focus {
@@ -1423,15 +1418,6 @@ body {
   }
 }
 
-.hello {
-  position: relative;
-}
-
-ul.nav-pills {
-  top: 20px;
-  position: fixed;
-}
-
 figure.snip1192 {
   font-family: 'Raleway', Arial, sans-serif;
   position: relative;
@@ -1840,6 +1826,12 @@ figure.snip1192 .author h5 span {
   border-radius: 50%;
   -webkit-box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1);
           box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+@media screen and (max-width: 500px) {
+  .carousel-team-card-cell {
+    width: 80% !important;
+  }
 }
 
 .carousel-team-card {
@@ -2754,9 +2746,10 @@ ul.social-network li {
 }
 
 .img-back {
+  z-index: 999;
   height: 400px;
   width: 100%;
-  background-color: #000;
+  background-color: rgba(12, 8, 8, 0.466);
 }
 
 .uicf {
@@ -3067,5 +3060,52 @@ a.slide_btn {
 .back-colox {
   background: #713558;
   margin: 10px;
+}
+
+.img-course {
+  border-radius: 15px;
+  margin: 5%;
+}
+
+.c-course {
+  background-image: -webkit-gradient(linear, left top, right top, from(#050509), color-stop(#263747), color-stop(#2b6e82), color-stop(#32abae), to(#70e9c4));
+  background-image: linear-gradient(to right, #050509, #263747, #2b6e82, #32abae, #70e9c4);
+}
+
+@media screen and (min-width: 1022px) {
+  #jar {
+    -webkit-columns: 70%;
+            columns: 70%;
+  }
+}
+
+.vert-flag {
+  -webkit-box-shadow: 1px 0 1px rgba(90, 123, 167, 0.35);
+          box-shadow: 1px 0 1px rgba(90, 123, 167, 0.35);
+  background: #a2a2a2;
+  display: inline-block;
+  text-align: center;
+  width: 50px;
+  position: absolute;
+  padding-bottom: 50px;
+  top: -2px;
+  padding-top: 10px;
+  right: 10px;
+  color: #fff;
+  z-index: 11;
+}
+
+.vert-flag:before {
+  content: '';
+  display: block;
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-width: 25px;
+  border-color: transparent;
+  left: 0;
+  border-bottom-color: #ebebeb;
+  position: absolute;
+  bottom: -1px;
 }
 /*# sourceMappingURL=oer.css.map */

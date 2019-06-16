@@ -3,7 +3,7 @@
         <a href="" data-target="#sidebar" data-toggle="collapse" class="d-md-none text-center "><i class="fa fa-bars"></i></a>
     </h2>
     <main>
-    <div class="col-md-sm-10 ml-5 py-2">
+    <div class="col-md-sm-10 ml-5 py-2 ">
         <div class="container" id="jar">
             <div class="row">
                 
@@ -33,7 +33,11 @@
 {% for dest in destus %}
                     <div class="card col-md-offset-2 shadow mb-3 border-rounded content" style="max-width: 400px; ">
                         <div class="row no-gutters ">
-                          <div class="col-md-3 col-sm-8 mx-auto">
+                            <div class='element'>
+                                <span class='vert-flag'>clix</span>
+                              </div>
+                              
+                          <div class="col-md-3 col-sm-6 mx-auto">
                             <img src="
                                   https://via.placeholder.com/300.png/09f/fff     
                                       
@@ -42,7 +46,8 @@
                           <div class="col-md-8 col-sm-8">
                             <div class="card-body c-body">
                               <div class="card-header c-header"> {{ dest.course_title}} <br/> </div>
-                              <h5 class="card-title"><span class="badge badge-secondary"><i class="fas fa-flask fa-sm"></i> Math</span>
+
+                              <h5 class="card-title"><span class="badge badge-secondary"><i class="fas fa-flask fa-sm"></i>  </span>
                       <span class="badge badge-secondary"><i class="fas fa-user-graduate"></i>8th</span>
                       </h5>
                               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -69,8 +74,34 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
-          ...
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-4">.col-md-4</div>
+                <div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 ml-auto">.col-md-3 .ml-auto</div>
+                <div class="col-md-2 ml-auto">.col-md-2 .ml-auto</div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 ml-auto">.col-md-6 .ml-auto</div>
+              </div>
+              <div class="row">
+                <div class="col-sm-9">
+                  Level 1: .col-sm-9
+                  <div class="row">
+                    <div class="col-8 col-sm-6">
+                      Level 2: .col-8 .col-sm-6
+                    </div>
+                    <div class="col-4 col-sm-6">
+                      Level 2: .col-4 .col-sm-6
+                    </div>
+                  </div>
+                </div>
+              
+            </div>
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
