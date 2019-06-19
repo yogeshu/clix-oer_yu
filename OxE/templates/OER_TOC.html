@@ -44,9 +44,9 @@
         <!-- <li class="nav-item"><a class="nav-link" href="#"><i class ="fas fa-bar-chart fa-lg"></i>Handbook</a></li> -->
          <li class="nav-item"><a class="nav-link" href="#"> <i class="fas fa-puzzle-piece fa-lg"></i> Modules</a></li>
         <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-hand-holding-book "></i> Interactive</a></li>
-             <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-images fa-lg"></i> Images</a></li>
-        <li class="nav-item" ><a class="nav-link" href="#"><i class="fas fa-play-circle fa-lg"></i> Video's</a></li>
-         <li class="nav-item" id="image_player"><a class="nav-link" > <i class="fas fa-desktop fa-sm"></i>latform</a></li>
+             <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-images fa-sm"></i> Handbook</a></li>
+        <!-- <li class="nav-item" ><a class="nav-link" href="#"><i class="fas fa-play-circle fa-lg"></i> Video's</a></li>
+         <li class="nav-item" id="image_player"><a class="nav-link" > <i class="fas fa-desktop fa-sm"></i>latform</a></li> -->
     </ul>
 </div>
 <script>
@@ -67,5 +67,9 @@ $.ajax({
             }
           });
           
+});
+$('.nav').on('click', 'li', function(){
+    $('.nav li').removeClass('active');
+    $(this).addClass('active');
 });
 </script>

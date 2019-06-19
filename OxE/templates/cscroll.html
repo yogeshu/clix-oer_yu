@@ -1,122 +1,47 @@
 {% extends "base.html" %}
+<link href="../static/multislider.js">
 
 {% block content %}
 <body>
 <div class="container-fluid hello">
     <div class="row">
-      <nav class="col-3 col-sm-2" id="verticalScrollspy">
-        <ul class="nav flex-column nav-pills">
-          <li class="nav-item"><a class="nav-link active" href="#dogs">Dogs</a></li>
-          <li class="nav-item"><a class="nav-link" href="#cats">Cats</a></li>
-          <li class="nav-item"><a class="nav-link" href="#fish">Fish</a></li>
-          <li class="nav-item"><a class="nav-link" href="#penguins">Penguins</a></li>
-          <li class="nav-item"><a class="nav-link" href="#alpacas">Alpacas</a></li>
-          <li class="nav-item"><a class="nav-link" href="#rabbits">Rabbits</a></li>
+      <nav class="col-12 col-sm-12 col-md-2" id="verticalScrollspy">
+        <ul class="nav flex-column nav-pills nav-scroll">
+          <li class="nav-item active"><a class="nav-link active" href="#dogs">Modules</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cats">How to Use</a></li>
+          <li class="nav-item"><a class="nav-link" href="#team">Team Cards</a></li>
+          <li class="nav-item"><a class="nav-link" href="#penguins">Design and devolopement </a></li>
+          <li class="nav-item"><a class="nav-link" href="#alpacas">Testimonials </a></li>
+          <li class="nav-item"><a class="nav-link" href="#rabbits">Feedback</a></li>
         </ul>
       </nav>
-      <div class="col-9 col-lg-10">
+      <div class="col-12 col-md-10 col-lg-10">
         <div data-spy="scroll" data-target="#verticalScrollspy">
           <div id="dogs" class="container-fluid" >
-            <h1>Dogs</h1>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
+            
+
+             {% include "module_cards.html" %}
+             {% include "pagination.html" %}
           </div>
           <div id="cats" class="container-fluid">
             <h1>Cats</h1>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
+            {% include "icon_slider.html" %}
           </div>
-          <div id="fish" class="container-fluid">
-            <h1>Fish</h1>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
+          <div id="team" class="container-fluid">
+           {% include "team_cards.html" %}
           </div>
           <div id="penguins" class="container-fluid">
             <h1>Penguins</h1>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
+           {% include "devlopementanwork.html" %} 
+         
           </div>
           <div id="alpacas" class="container-fluid">
-            <h1>Alpacas</h1>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
+            <h1>Alpacas</h1>         
+{% include "oer_testimonials.html" %}
           </div>
           <div id="rabbits" class="container-fluid">
             <h1>Rabbits</h1>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
-            <p>Look at the navigation menu to see how it interacts with scrolling over this segment</p>
+{% include "contactForm.html" %}           
           </div>
         </div>
       </div>
@@ -137,5 +62,31 @@
       
       
       </script> -->
-  </body>
+      <script>
+
+        $('#basicSlider').multislider({
+                continuous: true,
+                duration: 2000
+              });
+              $('#mixedSlider').multislider({
+                duration: 750,
+                interval: 3000
+              });
+        
+        
+        
+        
+        </script>
+        </script>
+        <link rel="stylesheet" href="https://npmcdn.com/flickity@2/dist/flickity.css">
+        <script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
+        <script>
+$('.nav').on('click', 'li', function(){
+    $('.nav li').removeClass('active');
+    $(this).addClass('active');
+});
+
+          </script>
+        
+  
 {% endblock %}
