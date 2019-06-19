@@ -7,7 +7,7 @@
     <div class="row">
       <nav class="col-12 col-sm-12 col-md-2" id="verticalScrollspy">
         <ul class="nav flex-column nav-pills nav-scroll">
-          <li class="nav-item active"><a class="nav-link active" href="#dogs">Modules</a></li>
+          <li class="nav-item "><a class="nav-link active" href="#dogs">Modules</a></li>
           <li class="nav-item"><a class="nav-link" href="#cats">How to Use</a></li>
           <li class="nav-item"><a class="nav-link" href="#team">Team Cards</a></li>
           <li class="nav-item"><a class="nav-link" href="#penguins">Design and devolopement </a></li>
@@ -81,11 +81,33 @@
         <link rel="stylesheet" href="https://npmcdn.com/flickity@2/dist/flickity.css">
         <script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
         <script>
-$('.nav').on('click', 'li', function(){
-    $('.nav li').removeClass('active');
-    $(this).addClass('active');
-});
 
+
+(function(){
+    // Your base, I'm in it!
+    var originalAddClassMethod = jQuery.fn.addClass;
+
+    jQuery.fn.addClass = function(){
+        // Execute the original method.
+        var result = originalAddClassMethod.apply( this, arguments );
+
+        // trigger a custom event
+        jQuery(this).trigger('cssClassChanged');
+
+        // return the original result
+        return result;
+    }
+})();
+
+$(".nav-link").bind('cssClassChanged' , function(e) {
+        $(".nav-item").each( function() {
+            if( $(this).hasClass("active") == true ) {
+                $(this).removeClass("active");
+            }
+        });
+
+        $(this).removeClass("active").parent().addClass("active");
+    });
           </script>
         
   
