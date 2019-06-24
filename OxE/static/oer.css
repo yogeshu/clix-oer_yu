@@ -18,7 +18,7 @@ body {
   width: 100%;
   font-size: 12px;
   font-weight: 400;
-  font-family: 'Poppins' Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #000;
 }
 
@@ -541,7 +541,7 @@ body {
 }
 
 .card:hover {
-  border: 2px dotted #000;
+  border: 2px solid #177986;
 }
 
 .card-header {
@@ -2731,6 +2731,7 @@ ul.social-network li {
 #sidebar .nav-item.active {
   margin: 0px -10px 0px -10px;
   border-radius: 15px;
+  background: #C95AA7;
 }
 
 #sidebar .nav-itema {
@@ -3294,5 +3295,60 @@ i {
 
 .card-profile .card-links .fa.fa-facebook:hover {
   color: #2d4474;
+}
+
+@media all and (min-width: 1024px) and (max-width: 1152px) {
+  .content {
+    max-width: 370px !important;
+  }
+  .content-module {
+    margin-left: 0px !important;
+  }
+}
+
+@media screen and (max-width: 756px) {
+  .butn {
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 1px 3px #666666;
+    box-shadow: 0px 1px 3px #666666;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 12px;
+    background: #61095dd5;
+    padding: 10px;
+    border: solid #7d0d8b 1px;
+    text-decoration: none;
+  }
+}
+
+.icon-header {
+  background: #fff !important;
+}
+
+.fc {
+  font-weight: 300;
+}
+
+.icon-img {
+  margin: 10px;
+}
+
+.ur-team {
+  height: 25.5rem;
+  width: 17.5rem;
+  background: #eceff1;
+  -webkit-box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+  box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+  border-radius: 0.375rem;
+  padding: 0 1.5rem 3rem;
+  border-top: 3px solid #e3e4;
+  padding: 20px 15px 30px;
+  border-radius: 15px;
+}
+
+.ur-team:hover {
+  -webkit-box-shadow: inset 17px 20px 19px -16px rgba(82, 41, 82, 0.41);
+  box-shadow: inset 17px 20px 19px -16px rgba(82, 41, 82, 0.41);
+  border: 2px solid #809b9985;
 }
 /*# sourceMappingURL=oer.css.map */
