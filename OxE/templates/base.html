@@ -19,6 +19,12 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
 
      <script src="../static/eclipse.js"></script>
+
+
+     </script> 
+     
+     
+     <!-- <script src="../static/config.js"></script> -->
      <link href="https://fonts.googleapis.com/css?family=Poppins:400,700i&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
@@ -31,10 +37,12 @@
 
      </style>
 </head>
-<body data-spy="scroll" data-target="#verticalScrollspy" data-offset="20">
-   
-    {% include "navbar.html"  %}
 
+<body data-spy="scroll" data-target="#verticalScrollspy" data-offset="20">
+  <a id="u-c"></a>
+  <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+    {% include "navbar.html"  %}
+   
     {% block content %}
 
     {% endblock %}
@@ -44,4 +52,22 @@
 
   
 </body>
+<script>
+$(document).ready(function(){ 
+    $(window).scroll(function(){ 
+        if ($(this).scrollTop() > 100) { 
+            $('#scroll').fadeIn(); 
+        } else { 
+            $('#scroll').fadeOut(); 
+        } 
+    }); 
+    $('#scroll').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+        return false; 
+    }); 
+});
+</script>
+
+
+
 </html>

@@ -20,3 +20,9 @@ class index:
     course_math: bool
     course_science: bool
     course_english: bool
+    
+class indexindex:
+    slide_name:str
+    slide_position:str
+    slide_bio:str
+    slide_co:str

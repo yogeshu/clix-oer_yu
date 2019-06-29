@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from .models import index
+from .models import index , indexindex
 
 # Create your views here.
 def homepage_view(request, *args, **kwargs):
@@ -10,7 +10,7 @@ def homepage_view(request, *args, **kwargs):
     destu1.course_value = "science"
     destu1.coruse_student = "8th"
     destu1.course_description =  "lorem more more more more "
-    destu1.course_title = "Math courses"
+    destu1.course_title = "Communicative English"
     destu1.course_math = True
     destu1.course_science =True
     destu1.course_english= True
@@ -73,9 +73,37 @@ def domain_view(request,  *args, **kwargs):
     
      
     destus= [ destu1, destu2, destu3 ]
+
+
+    slider1= indexindex()
+    slider1.slide_name= "Jennifer Thomas"
+    slider1.slide_position= "Teacher"
+    slider1.slide_bio= "i am a new deveopeer work on clix" 
+    slider1.slide_co= "www.google.com"
+
+    slider2= indexindex()
+    slider2.slide_name= "Jennifer Thomas"
+    slider2.slide_position= "developer"
+    slider2.slide_bio= "i am a new deveopeer work on clix" 
+    slider2.slide_co= "www.google.com"
+
+    slider3= indexindex()
+    slider3.slide_name= "Jennifer Thomas"
+    slider3.slide_position= "developer"
+    slider3.slide_bio= "i am a new deveopeer work on clix" 
+    slider3.slide_co= "www.google.com"
+
+    slider4= indexindex()
+    slider4.slide_name= "Jennifer Thomas"
+    slider4.slide_position= "developer"
+    slider4.slide_bio= "i am a new deveopeer work on clix" 
+    slider4.slide_co= "www.google.com"
+    
+
+    slider= [ slider1 , slider2 , slider3 , slider4  ]
     # return render(request , "domain.html", {})
 
-    return render(request , "domain.html" , {'destus':destus})
+    return render(request , "domain.html" , {'slider':slider, 'destus':destus})
 def demo_view( request, *args, **kwargs):
     destu1 = index()
     destu1.course_value = "math"
