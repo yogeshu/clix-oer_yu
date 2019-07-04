@@ -145,11 +145,9 @@
 <script>
   function getPageList(totalPages, page, maxLength) {
     if (maxLength < 5) throw "maxLength must be at least 5";
-
     function range(start, end) {
       return Array.from(Array(end - start + 1), (_, i) => i + start);
     }
-
     var sideWidth = maxLength < 9 ? 1 : 2;
     var leftWidth = (maxLength - sideWidth * 2 - 3) >> 1;
     var rightWidth = (maxLength - sideWidth * 2 - 2) >> 1;
@@ -178,7 +176,6 @@
       .concat([0])
       .concat(range(totalPages - sideWidth + 1, totalPages));
   }
-
   $(function() {
     // Number of items and limits the number of items per page
     var numberOfItems = $("#jar .content").length;
@@ -190,7 +187,6 @@
     // Must be at least 5:
     var paginationSize = 7;
     var currentPage;
-
     function showPage(whichPage) {
       if (whichPage < 1 || whichPage > totalPages) return false;
       currentPage = whichPage;
@@ -221,7 +217,6 @@
       });
       return true;
     }
-
     // Include the prev/next buttons:
     $(".pagination").append(
       $("<li>")
@@ -250,7 +245,6 @@
     // Show the page links
     $("#jar").show();
     showPage(1);
-
     // Use event delegation, as these items are recreated later
     $(document).on(
       "click",
@@ -262,7 +256,6 @@
     $("#next-page").on("click", function() {
       return showPage(currentPage + 1);
     });
-
     $("#previous-page").on("click", function() {
       return showPage(currentPage - 1);
     });
@@ -270,7 +263,6 @@
       $("html,body").animate({ scrollTop: 0 }, 0);
     });
   });
-
   $("#myModal").on("shown.bs.modal", function() {
     $("#myInput").trigger("focus");
   });

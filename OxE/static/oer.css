@@ -503,7 +503,6 @@ body {
   color: #ffffff;
   font-size: 12px;
   background: #61095dd5;
-  padding: 7px 49px;
   border: solid #7d0d8b 1px;
   text-decoration: none;
 }
@@ -1910,7 +1909,7 @@ figure.snip1192 .author h5 span {
 }
 
 .carousel-team-card-cell .card-team-content p {
-  font-size: 14px;
+  font-size: 12px;
   margin-bottom: 0;
 }
 
@@ -2598,7 +2597,7 @@ ul.social-network li {
   margin: 0 20px 0 0;
   font-size: 16px;
   font-style: italic;
-  color: rgba(226, 215, 215, 0.82);
+  color: rgba(72, 172, 218, 0.82);
   font-weight: bold;
   letter-spacing: 1px;
   -webkit-transition: linear 0.1s;
@@ -2726,8 +2725,8 @@ ul.social-network li {
 }
 
 #sidebar .nav-item {
-  padding: 10px 35px;
   border-bottom: 1px solid #222;
+  background: #a110b4;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#532245), color-stop(#632a53), color-stop(#743262), color-stop(#853b72), to(#964482));
   background-image: linear-gradient(to top, #532245, #632a53, #743262, #853b72, #964482);
   border: 1px 0px solid #222;
@@ -2748,13 +2747,8 @@ ul.social-network li {
   border-radius: 15px 15px 0px 0px;
 }
 
-#sidebar .nav-item:last-child {
-  border-radius: 0px 0px 15px 15px;
-}
-
 #sidebar a {
   overflow: hidden;
-  padding: 10px;
   font-size: 12px;
   font-weight: bold;
   color: #f9e2ad;
@@ -2932,7 +2926,6 @@ a.slide_btn {
 }
 
 .bio {
-  height: 7rem;
   width: 100%;
   overflow: hidden;
   display: inline-block;
@@ -3140,10 +3133,6 @@ a.slide_btn {
   border-radius: 15px 15px 0px 0px;
 }
 
-.nav-scroll .nav-item:last-child {
-  border-radius: 0px 0px 15px 15px;
-}
-
 .nav-scroll .nav-item.active {
   margin: 0px -10px 0px -10px;
 }
@@ -3191,8 +3180,8 @@ i {
   -webkit-transform: translateY(-50%) translateX(-50%) scale(0.6);
           transform: translateY(-50%) translateX(-50%) scale(0.6);
   opacity: 0;
-  -webkit-filter: blur(5px);
-          filter: blur(5px);
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -3252,7 +3241,7 @@ i {
 .card-profile .card-img-profile {
   max-width: 100%;
   border-radius: 50%;
-  margin-top: -75px;
+  margin-top: -25px;
   margin-bottom: 35px;
   border: 5px solid #e6e5e1;
 }
@@ -3366,5 +3355,13 @@ i {
   -webkit-box-shadow: inset 17px 20px 19px -16px rgba(82, 41, 82, 0.41);
   box-shadow: inset 17px 20px 19px -16px rgba(82, 41, 82, 0.41);
   border: 2px solid #809b9985;
+}
+
+.badge-color {
+  background: #e4e7e9 !important;
+}
+
+.img-rou {
+  border-radius: 15px;
 }
 /*# sourceMappingURL=oer.css.map */

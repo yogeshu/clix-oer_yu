@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,re_path
-from OxE.views import homepage_view, domain_view, about_view , vix_view , demo_view , player_image_view , module_cards_detail_view, domain_sub_view
+from OxE.views import homepage_view, domain_view, about_view , vix_view , demo_view , player_image_view , module_cards_detail_view, domain_sub_view, cma_page
 urlpatterns = [
     
 path('', homepage_view , name= "home"),
@@ -25,5 +25,7 @@ path('about', about_view),
 path('cscroll' , demo_view),
 path('module_details' , module_cards_detail_view),
 path('admin/', admin.site.urls),
-re_path('domain/(?P<domain_name>\w+)$', domain_sub_view,name="domain_sub_view")
+re_path('domain/(?P<domain_name>\w+)$', domain_sub_view,name="domain_sub_view"),
+path('cmspage', cma_page),
+
 ]

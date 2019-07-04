@@ -10,7 +10,7 @@ def homepage_view(request, *args, **kwargs):
     destu1.course_value = "science"
     destu1.coruse_student = "8th"
     destu1.course_description =  "lorem more more more more "
-    destu1.course_title = "Communicative English"
+    destu1.course_title = "Communicative English level 1"
     destu1.course_math = True
     destu1.course_science =True
     destu1.course_english= True
@@ -47,18 +47,18 @@ def domain_view(request,  *args, **kwargs):
     # return HttpResponse ("<h1> hello iam new to domain_vix </h1>")
      
     destu1 = index()
-    destu1.course_value = "math"
+    destu1.course_value = "English"
     destu1.coruse_student = "8th"
     destu1.course_description =  "lorem more more more more "
-    destu1.course_title = "Math courses"
+    destu1.course_title = "Communicative English 1" 
     destu1.course_math = True
 
      
     destu2 = index()
-    destu2.course_value = "science"
+    destu2.course_value = "English"
     destu2.coruse_student = "9th"
     destu2.course_description =  "lorem more"
-    destu2.course_title = "sciene courses"
+    destu2.course_title = "Communicative English 2"
     destu2.course_math = False
      
     destu3 = index()
@@ -134,7 +134,8 @@ def demo_view( request, *args, **kwargs):
     destus= [ destu1, destu2, destu3 ]
     # return HttpResponse ("<h1> hello i am new demo_view </h1>")
     return render(request , "cscroll.html", {'destus':destus})
-
+def cma_page(request , *args , **kwargs):
+    return render(request, "cmspage.html" , {})
 
 def vix_view( request,  *args, **kwargs):
     # return HttpResponse ("<h1> hello iam new to vix </h1>")

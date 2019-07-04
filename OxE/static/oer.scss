@@ -602,7 +602,7 @@ $custom:(
     color: #ffffff;
     font-size: 12px;
     background: #61095dd5;
-    padding: 7px 49px;
+    // padding: 7px 49px;
     border: solid #7d0d8b 1px;
     text-decoration: none;
   }
@@ -1990,7 +1990,7 @@ background: red;
 }
 
 .carousel-team-card-cell .card-team-content p {
-  font-size: 14px;
+  font-size: 12px;
   margin-bottom: 0;
 }
 
@@ -2759,7 +2759,7 @@ $back-col: #c5cae9;
   margin: 0 20px 0 0;
   font-size: 16px;
   font-style: italic;
-  color: rgba(226, 215, 215, 0.82);
+  color: rgba(72, 172, 218, 0.82);
   font-weight: bold;
   letter-spacing: 1px;
   transition: linear 0.1s;
@@ -2890,11 +2890,13 @@ border-radius: 15px;
    .nav-item { 
   
  
-  padding: 10px 35px;
+  // padding: 10px 35px;
   border-bottom:1px solid #222;
+  background: #a110b4;
   background-image: linear-gradient(to top, #532245, #632a53, #743262, #853b72, #964482);
 
   // background: #715;
+
   border:1px 0px solid #222;
   overflow:hidden;
   &.active {
@@ -2912,14 +2914,14 @@ border-radius: 15px;
 border-radius: 15px 15px 0px 0px;
 }
 .nav-item:last-child{
-  border-radius: 0px 0px 15px 15px;
+  // border-radius: 0px 0px 15px 15px;
 
 }
 }
  #sidebar a{
     overflow:hidden;
     // padding: 20px 20px;
-    padding: 10px;
+    // padding: 20px;
     font-size: 12px;
     font-weight: bold;
     color: #f9e2ad;
@@ -3122,7 +3124,7 @@ height: 8rem;
 
 .bio{
 
-  height: 7rem;
+  // height: 11rem;
   width: 100%;
   overflow: hidden;
   display: inline-block;
@@ -3401,7 +3403,7 @@ display:  inline-block;
 border-radius: 15px 15px 0px 0px;
 }
 .nav-item:last-child{
-  border-radius: 0px 0px 15px 15px;
+  // border-radius: 0px 0px 15px 15px;
 }
 .nav-item.active{
   margin: 0px -10px 0px -10px;
@@ -3448,7 +3450,7 @@ padding-left: 10%;
       top: 50%;
       transform: translateY(-50%) translateX(-50%) scale(0.6);
       opacity: 0;
-      filter: blur(5px);
+      filter: blur(1px);
       transition: all 0.3s ease;
     }
     $offset: 30%;
@@ -3512,7 +3514,7 @@ $facebook-color: #3b5999;
   .card-img-profile {
     max-width: 100%;
     border-radius: 50%;
-    margin-top: -75px;
+    margin-top: -25px;
     margin-bottom: 35px;
     border: 5px solid $card-bg;
   }
@@ -3638,3 +3640,9 @@ box-shadow: inset 17px 20px 19px -16px rgba(82,41,82,0.41);
   border:2px solid #809b9985;
 }
 
+ .badge-color{
+  background: rgb(228, 231, 233) !important;
+}
+.img-rou{
+  border-radius: 15px;
+}
