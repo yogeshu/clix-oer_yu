@@ -1,17 +1,52 @@
+
+
+<style type="text/css">
+    /* #group_imgs_on_modal{
+        overflow-y: auto;
+        height:600px;
+    } */
+</style>
+
 <div class="row">
     <div class="col col-sm-8 col-md-8 py-5 mx-auto">
-          <form class="form-group">
+          <div class="form-group">
                   <textarea name="editor1" id="editor1" rows="10" cols="80">
                 
                   </textarea>
                   <button type="submit" class="btn btn-primary mt-5">
 
                     submit
-                  </button>              </form>
+                  </button>              </div>
 
     </div>
 </div>
 
+
+<!-- Button trigger modal -->
+<button id="group_imgs_on_modal" data-toggle="modal" data-target="#exampleModalCenter">
+      
+      </button>
+      
+      <!-- Modal -->
+      <!-- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div> -->
 <script>
     if("{{ckeditor_toolbar}}" == "GgallaryCommentsToolbar"){
         ckeditor_height = "100px";

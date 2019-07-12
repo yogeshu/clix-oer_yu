@@ -3,21 +3,21 @@
 <div class="col-md-2 col-sm-10 col-md-2 collapse d-md-flex navbar-expand-lg pt-2 min-vh-100" id="sidebar">
        <nav>
                 <ul class="nav flex-column nav-pills nav-scroll">
-                        <li class="nav-item"> <a class="nav-link collapsed " href="#submenu1" data-toggle="collapse" data-target="#submenu1">Subject <i class="float-right fas fa-plus-circle fa-lg"></i></a></li>
+                        <li class="nav-item " id="main-page"> <a class="nav-link collapsed " href="#submenu1" data-toggle="collapse" data-target="#submenu1">Subject <i class="float-right fas fa-plus-circle fa-lg"></i></a></li>
                         <div class="collapse" id="submenu1" aria-expanded="false">
-                            <ul class="flex-column pl-1 nav">
-                         <li class="nav-item">  <a class="nav-link " href="#"><input type="checkbox" name="english"> <i class="fas fa-font" > </i>English</a></li>
+                            <ul class="flex-column px-1 nav">
+                         <li class="nav-item">  <a class="nav-link " href="#"><input type="checkbox" name="english"> <i class="fas fa-language" > </i>English</a></li>
                                 <li class="nav-item"><a class="nav-link " href="#">  <input type="checkbox" name="english"><i class="fas fa-calculator"></i> math</a></li>
             
-                                <li class="nav-item"><a class="nav-link " href="#">  <input type="checkbox" name="english"><i class="fas fa-flask"></i> science</a></li>
+                                <li class="nav-item"><a class="nav-link " href="#">  <input type="checkbox" name="english"><i class="fas fa-flask"></i> science </a></li>
             
                         
                             </ul>
                         </div>
                     </li>                 
-                    <li class="nav-item"><a class="nav-link" href="#"> <i class="fas fa-puzzle-piece fa-lg"></i> Modules</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-dice-d6 "></i> Interactive</a></li>
-                   <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-images fa-sm"></i> Handbook</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"> <i class="fas fa-puzzle-piece fa-lg" id="u"></i> Modules</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="Uool_play"><i class="fas fa-dice-d6 "></i> Interactive</a></li>
+                   <li class="nav-item"><a class="nav-link" href="#" id="image_player"><i class="fas fa-images fa-sm"></i> Handbook</a></li>
                 </ul>
               </nav>
        
@@ -49,8 +49,48 @@ $.ajax({
           });
           
 });
+
+$('#Uool_play').click(function() {
+$.ajax({
+            type: "POST",
+            url: "{% url 'player_image_view' %}",
+            datatype: "html",
+            data:{
+           
+              csrfmiddlewaretoken: '{{ csrf_token }}'
+            },
+            success: function(data) {
+              $('#jar').html(data)
+             
+
+            }
+          });
+          
+});
+
+$('#u').click(function() {
+$.ajax({
+            type: "POST",
+            url: "{% url 'player_image_view' %}",
+            datatype: "html",
+            data:{
+           
+              csrfmiddlewaretoken: '{{ csrf_token }}'
+            },
+            success: function(data) {
+              $('#jar').html(data)
+             
+
+            }
+          });
+          
+});
 $('.nav').on('click', 'li', function(){
     $('.nav li').removeClass('active');
     $(this).addClass('active');
+});
+$('#main-page').click(function() {
+    $('#submenu1').toggle();
+    $("i", this).toggleClass(" fa-plus-circle fa-lg  fa-minus-circle fa-lg  ");
 });
 </script>

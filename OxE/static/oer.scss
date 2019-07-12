@@ -3646,3 +3646,20 @@ box-shadow: inset 17px 20px 19px -16px rgba(82,41,82,0.41);
 .img-rou{
   border-radius: 15px;
 }
+
+@media (min-width: 992px){
+.navbar-expand-lg .navbar-nav .nav-link {
+     padding-right: 0rem !important;
+}
+}
+
+@media screen and (max-width:1040px) and (min-width:1000px){
+  .card{
+    max-width: 390px !important;
+  }
+  .card.col-md-offset-2.shadow.mb-3.border-rounded.content {
+    
+    margin-left:  4px !important;
+  }
+  
+}
